@@ -1,25 +1,14 @@
-- name: Heroku Action
+- name: Git deploy to Heroku
   # You may pin to the exact commit or the version.
-  # uses: CDNievas/heroku-action@c9cf9c85571e67583e44ec92c0d1113f66b0e838
-  uses: CDNievas/heroku-action@v1.0
+  # uses: onekiloparsec/heroku-node-deploy-subfolder@85d5701f800be8126e12b7f6f47e965c71f67b56
+  uses: onekiloparsec/heroku-node-deploy-subfolder@v1.1.0
   with:
-    # Used for authentication. You can find it in your heroku homepage account settings
-    heroku_api_key: 
-    # Email from Heroku Account
-    heroku_email: 
-    # The appname to use for deploying/updating
-    heroku_app_name: 
-    # The branch that you would like to deploy to Heroku
-    branch: # optional, default is HEAD
-    # Set this to true if want to use --force
-    useforce: # optional
-    # Set if your app is located in a subdirectory.
-    appdir: # optional, default is 
-    # Contents of the Procfile to save and deploy
-    procfile: # optional, default is 
-    # Set to true if you need upload files generated dynamically by the GitHub Action to Heroku
-    dynamicFiles: # optional
-    # Buildpacks to install on Heroku
-    buildpacks: # optional, default is 
-    # Path to an localized env file
-    env_file: # optional, default is 
+    # Your Heroku API key. This will be used for authentication. You can find it in your Heroku account settings
+    api_key: '5b7d7dc3-fe84-4c7c-850a-b96d1126b728'
+    # The email of your Heroku account (needed for auth).
+    email: 'koyama@reytech.co.jp'
+    # The app name to use for deploying/updating
+    app_name: 'github-actions-test-ky'
+    # The Heroku branch name that you would like to deploy to (`master` or `main`).
+    heroku_branch: 'main'
+    # The subfolder where your built code is sitted, e.g. `dist`.
